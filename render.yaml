@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: glowprice-morocco
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: glowprice-db
+          property: connectionString
+      - key: ADMIN_SECRET
+        generateValue: false
+
+databases:
+  - name: glowprice-db
+    plan: free
+    databaseName: glowprice
