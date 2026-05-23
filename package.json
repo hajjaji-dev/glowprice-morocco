@@ -1,0 +1,17 @@
+{
+  "name": "glowprice-morocco",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js",
+    "build": "npx prisma generate && npx prisma db push --accept-data-loss"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "axios": "^1.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.0",
+    "node-cron": "^3.0.3",
+    "prisma": "^5.14.0"
+  },
+  "engines": { "node": ">=20" }
+}
